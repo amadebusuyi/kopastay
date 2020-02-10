@@ -1,0 +1,92 @@
+html {
+    font-size: 62.5%;
+}
+:root {  
+  --color-primary: #2b2b2b;
+  --default-size: 1.6rem;
+}
+body {
+    font-family: 'Lato', sans-serif;
+    background: url(../img/bg-img-desk.jpg);
+    background-size: cover;
+    background-position: inherit;
+}
+* {
+    outline: none!important;
+}
+.form-control:focus,
+.btn:focus {
+    box-shadow: none!important;
+}
+p,
+.form-control,
+label,
+.navbar-dark .navbar-nav .nav-link,
+button.btn.btn-primary {
+    font-size: var(--default-size);
+}
+p {
+    line-height: 22px;
+    letter-spacing: 0.02em;
+    color: #4a4a4a;
+}
+nav.navbar {
+    padding: 1.5rem 0;
+    padding-top: 1rem;
+}
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255,255,255);
+    padding: 0 2rem;
+}
+.register-wrapper {
+    max-width: 45rem;
+    padding: 3.2rem;
+    background: #fff;
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    color: #000;
+    border-radius: 4px;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+}
+.register-wrapper form {
+    margin-top: 2rem;
+}
+.form-control {
+    padding-top: 0;
+    height: 4.5rem;
+}
+button.btn.btn-primary {
+    padding: 1rem 3rem;
+    padding-top: 6px;
+}
+.error-message {
+    font-size: 1.4rem;
+    color: red;
+    display: none;
+}
+.slider-range-value-1, .slider-range-value-2, .text-btw{
+    font-size: 1.6rem;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.whatsapp{
+    text-align: center;
+}
+
+.whatsapp a{
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+#feedback{
+    display: none;
+}
+
+@media (max-width: 450px){
+    body{
+        background: url("../img/bg-img-mob.jpg");
+        background-size: cover;
+        background-position: inherit;
+    }
+}
