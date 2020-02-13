@@ -1,5 +1,11 @@
 html {
     font-size: 62.5%;
+    background: url(../img/bg-img-desk.jpg) no-repeat;
+    background-size: cover;
+    background-position: inherit;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100vw;
 }
 :root {  
   --color-primary: #2b2b2b;
@@ -7,9 +13,10 @@ html {
 }
 body {
     font-family: 'Lato', sans-serif;
-    background: url(../img/bg-img-desk.jpg);
-    background-size: cover;
-    background-position: inherit;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background: transparent;
 }
 * {
     outline: none!important;
@@ -24,6 +31,30 @@ label,
 .navbar-dark .navbar-nav .nav-link,
 button.btn.btn-primary {
     font-size: var(--default-size);
+}
+
+header{
+    position: absolute;
+    height: 100px;
+    top: 0;
+    width: 100vw;
+}
+
+.brand-logo{
+    margin: 30px;
+}
+
+.brand-logo img{
+    width: 200px;
+    height: auto;
+}
+
+.social-handles img{
+    position: absolute;
+    width: 40px;
+    height: auto;
+    top: 30px;
+    right: 70px;
 }
 p {
     line-height: 22px;
@@ -41,8 +72,8 @@ nav.navbar {
 .register-wrapper {
     max-width: 45rem;
     padding: 3.2rem;
-    background: #fff;
-    margin-top: 6rem;
+    background: rgba(255, 255, 255, 0.8);
+    margin-top: 12rem;
     margin-bottom: 6rem;
     color: #000;
     border-radius: 4px;
@@ -83,10 +114,35 @@ button.btn.btn-primary {
     display: none;
 }
 
+.btn-success{
+    background: #7bdb33; 
+    border-color: #7bdb55;
+    color: white !important;
+}
+
+.btn-warning{
+    color: white;
+}
+
 @media (max-width: 450px){
-    body{
-        background: url("../img/bg-img-mob.jpg");
-        background-size: cover;
-        background-position: inherit;
+    html{
+        background: url("../img/bg-img-mob.jpg") no-repeat;
     }
+
+.brand-logo{
+    margin: 20px;
+}
+
+.brand-logo img{
+    width: 200px;
+    height: auto;
+}
+
+.social-handles img{
+    position: absolute;
+    width: 40px;
+    height: auto;
+    top: 30px;
+    right: 30px;
+}
 }
