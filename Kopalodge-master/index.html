@@ -1,50 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
-	<title>Kopa Lodge</title>
+	<title>KopaStay</title>
 	<meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+    <meta name="description" content="Kopastay is there for you all through your service year starting from the primary need for an accomdation to other more important needs.">
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet">
     <link href="css/animate.min.css" rel="stylesheet">
     <link href="css/hover-min.css" rel="stylesheet">
     <link href="css/nouislider.min.css" rel="stylesheet">
-    <link rel="shortcut icon" type="image/png" href="images/logo.png"/>
+    <link rel="shortcut icon" type="image/png" href="img/logo.png"/>
     <link href="https://fonts.googleapis.com/css?family=Lato|Poppins&display=swap" rel="stylesheet">
 </head>
-<body style="">
-<!--    <header>
-        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-            <div class="container-fluid">
-              <-- Brand ->
-              <a class="navbar-brand" href="#">Logo</a>
-
-              <-- Toggler/collapsibe Button ->
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-
-              <-- Navbar links ->
-              <div class="collapse navbar-collapse" id="collapsibleNavbar">
-                <ul class="navbar-nav ml-auto">
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-        </nav>
-    </header>-->
+<body>
+    <header>
+      <div class="brand-logo">
+        <a href="index.html"><img src="img/kopastay-logo.png"></a>
+      </div>
+      <div class="social-handles right">
+        <a href="https://twitter.com/kopastay"><img src="img/twitter-blue.png"><a>
+      </div>
+    </header>
         <div class="container">
             <div class="register-wrapper">
-                <h1 class="form-h1">Let's find your accomodation for you!</h1>
+                <h1 class="form-h1">Need to get an accomodation? Don't stress, just book!</h1>
                     <div id="feedback">
                        
                     </div>                    
@@ -78,9 +59,9 @@
                         </div>
                     </div>
                         <div class="form-group">
-                            <label for="area">Description</label>
-                            <input type="text" name="desc" id="desc" class="form-control" placeholder="Description e.g area, proximity to a particular place..." required>
-                        <p class="error-message error-desc">Please write out a brief description</p>
+                            <label for="area">Additional Info</label>
+                            <input type="text" name="desc" id="desc" class="form-control" placeholder=" e.g area, proximity to PPA, ammenities..." required>
+                        <p class="error-message error-desc">Please add additional information</p>
                         </div>
 
                         <div class="style-1 wrapper m-b-50 m-t-50 p-l-r">
@@ -92,7 +73,7 @@
                         </div>
 
                         <div class="text-right">
-                            <button class="btn btn-primary next">Next</button>
+                            <button class="btn btn-primary btn-warning next">Let's go</button>
                         </div>
 
                     </div>
@@ -100,24 +81,24 @@
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" name="name" id="name" class="form-control" placeholder="Name" required>
-                        <p class="error-message">Please provide your name</p>
+                        <p class="error-message error-name">Please provide your name</p>
                         </div>
                         <div class="form-group">
                             <label for="email">Email</label>
                             <input type="email" name="email" id="email" class="form-control" placeholder="Email" required>
-                        <p class="error-message">Please provide your email address</p>
+                        <p class="error-message error-email">Please provide a valid email address</p>
                         </div>
                         <div class="form-group">
                             <label for="phone">Phone Number</label>
                             <input type="phone" name="phone" id="phone" class="form-control" placeholder="Phone Number" required>
-                        <p class="error-message">Please provide your phone number</p>
+                        <p class="error-message error-phone">Please provide a valid phone number</p>
                         </div>
                         <br>
                         <div class="text-left" style="position: absolute">
-                            <button type="button" class="btn btn-primary prev">Previous</button>
+                            <button type="button" class="btn btn-primary btn-warning prev">Go back</button>
                         </div>
                         <div class="text-right">
-                            <button type="button" id="submit" class="btn btn-primary btn-warning submit"><b>Submit</b></button>
+                            <button type="button" id="submit" class="btn btn-primary btn-success submit"><b>Submit</b></button>
                         </div>
                     </div>
                 </form>
@@ -128,7 +109,8 @@
     <script src="js/bootstrap.min.js"></script>
     <script src="js/nouislider.min.js"></script>
     <script src="js/nigeria.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.8.1/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-analytics.js"></script>
     <script src="js/getinfo.js"></script>
     <script>
         $(document).ready(function(){
@@ -145,11 +127,11 @@
                 return false;
             }
 
-            else if ($("#desc").val() === ""){
+         /*   else if ($("#desc").val() === ""){
                 $("#desc").focus();
                 $(".error-desc").show();
                 return false;
-            }
+            } */
             $(".form-h1").html("Almost done! Tell us how to contact you")
             $('#apartment-details').hide();
             $('#personal-details').show();
@@ -157,7 +139,7 @@
 
         $('.prev').click(function(e){
             e.preventDefault();
-            $(".form-h1").html("Let's find your accomodation for you!")
+            $(".form-h1").html("Need to get an accomodation? Don't stress, just book!")
             $('#apartment-details').show();
             $('#personal-details').hide();
         });
@@ -185,10 +167,10 @@
           rangeSliderValueElement2.innerHTML = "₦"+values[1];
         });
         /* end Value  */
-
+        
         /* begin Tab */
         var handle = rangeSlider.querySelector(".noUi-handle");
-
+        
         handle.setAttribute("tabindex", 0);
 
         handle.addEventListener("click", function() {
@@ -215,6 +197,18 @@
 
         $("#desc").change(function(){
             $(".error-desc").hide();
+        })
+
+        $("#name").change(function(){
+            $(".error-name").hide();
+        })
+
+        $("#email").change(function(){
+            $(".error-email").hide();
+        })
+
+        $("#phone").change(function(){
+            $(".error-phone").hide();
         })
 
         $("#state").change(function(){
