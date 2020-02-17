@@ -5,225 +5,252 @@
 	<meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
-    <meta name="description" content="Kopastay is there for you all through your service year starting from the primary need for an accomdation to other more important needs.">
+    <meta name="description" content="We love comfort, so we designed a solution to solve all related accommodation problems and stress among Corps members in all major cities in Nigeria.">
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/style.css" rel="stylesheet">
-    <link href="css/animate.min.css" rel="stylesheet">
-    <link href="css/hover-min.css" rel="stylesheet">
+    <link href="font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <link href="font-awesome-4.7.0/css/font-awesome-animation.min.css" rel="stylesheet"/>
     <link href="css/nouislider.min.css" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="img/logo.png"/>
     <link href="https://fonts.googleapis.com/css?family=Lato|Poppins&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-      <div class="brand-logo">
-        <a href="index.html"><img src="img/kopastay-logo.png"></a>
-      </div>
-      <div class="social-handles right">
-        <a href="https://twitter.com/kopastay"><img src="img/twitter-blue.png"><a>
-      </div>
+        <div class="brand-logo">
+            <a href="index.html">
+                <img src="img/kopastay-logo.png" class="img-fluid" alt="KopaStay logo">
+            </a>
+        </div>
+        <div class="social-handles right">
+            <a href="https://twitter.com/kopastay">
+                <img src="img/twitter-blue.png" class="img-fluid" alt="twitter logo">
+            </a>
+        </div>
     </header>
+    <main>
         <div class="container">
             <div class="register-wrapper">
-                <h1 class="form-h1">Need to get an accomodation? Don't stress, just book!</h1>
-                    <div id="feedback">
-                       
-                    </div>                    
-                <form>                    
-                    <div id="apartment-details">
-                        <div class="form-group">
-                            <label for="apartment">Apartment Type</label>
-                            <select id="apartment" class="form-control">
-                                <option>Single room</option>
-                                <option>Self-Contained room</option>
-                                <option>One bedroom apartment</option>
-                                <option>2 bedroom apartment</option>
-                                <option>3 bedroom apartment</option>
-                            </select>
-                        <p class="error-message">Please provide your preferred apartment type</p>
+                <!-- <div id="feedback"></div> -->
+                <div id="feedback">
+                    <h2>Request Received</h2>
+                    <img src="img/check.png" class="img-fluid" alt="check icon">
+                    <p class="bold">Our agents are already searching for the perfect apartment for you. You will receive an email with tailored options within 24hours</p>
+                    <hr>
+                    <p class="whatsapp">You can move the conversation to Whatsapp for faster responses</p>
+                    <a href="" class="btn btn-success btn-continue">Continue on WhatsApp</a>
+                </div>
+                <div>
+                    <div class="text-center">
+                        <h1 class="step">Step 1/2</h1>
+                        <p class="form-text">Welcome! Let's help you find the<br>perfect accommodation.</p>
+                    </div>                                    
+                    <form>                    
+                        <div id="apartment-details">
+                            <div class="form-group">
+                                <label for="apartment">Apartment Type</label>
+                                <select id="apartment" class="form-control">
+                                    <option>Single room</option>
+                                    <option>Self-Contained room</option>
+                                    <option>One bedroom apartment</option>
+                                    <option>2 bedroom apartment</option>
+                                    <option>3 bedroom apartment</option>
+                                </select>
+                                <p class="error-message">Please provide your preferred apartment type</p>
+                            </div>
+                            <div class="row">
+                                <div class="form-group col-md-6 col-lg-6 col-sm-6 col-xs-6">
+                                    <label for="state">State</label>
+                                    <select id="state" class="form-control">
+                                        <option>Select State</option>
+                                    </select>
+                                    <p class="error-message error-state">Please choose your preferred State</p>
+                                </div>
+                                <div class="form-group col-md-6 col-lg-6 col-sm-6 col-xs-6">
+                                    <label for="lga">LGA</label>
+                                    <select id="lga" class="form-control">
+                                        <option>Select LGA</option>
+                                    </select>
+                                    <p class="error-message error-lga">Please choose your preferred local government</p>
+                                </div>
+                            </div>
+                            <div class="style-1 wrapper m-b-50 m-t-50 p-l-r">
+                                <label for="budget">Budget</label>
+                                <div class="slider-range m-b-20" style="margin-top: 5px;"></div>
+                                <div class="d-flex" style="justify-content: space-between;">
+                                    <span class="slider-range-value-1"></span>
+                                    <span class="slider-range-value-2"></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="area">Additional Info</label>
+                                <textarea class="form-control" name="desc" id="desc" placeholder="Tell us more about what your perfect apartment should have." required></textarea>
+                                <p class="error-message error-desc">Please add additional information</p>
+                            </div>
+                            <div class="text-center">
+                                <button class="btn btn-primary next">Continue</button>
+                            </div>
                         </div>
-                        <div class="row">
-                        <div class="form-group col-md-6 col-lg-6 col-sm-6 col-xs-6">
-                            <label for="state">State</label>
-                            <select id="state" class="form-control">
-                                <option>Select State</option>
-                            </select>
-                        <p class="error-message error-state">Please choose your preferred State</p>
+                        <div id="personal-details" style="display: none;">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" name="name" id="name" class="form-control" placeholder="Chinedu Ibrahim Adamu" required>
+                            <p class="error-message error-name">Please provide your name</p>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email" class="form-control" placeholder="Chiofafrica1@xyz.com" required>
+                            <p class="error-message error-email">Please provide a valid email address</p>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="phone" name="phone" id="phone" class="form-control" placeholder="+234" required>
+                            <p class="error-message error-phone">Please provide a valid phone number</p>
+                            </div>
+                            <br>
+                            <div class="text-left" style="position: absolute">
+                                <button type="button" class="btn btn-primary prev">Go back</button>
+                            </div>
+                            <div class="text-right">
+                                <button type="button" id="submit" class="btn btn-primary submit has-spinner">
+                                    <span class="spinner"><i class="fa fa-refresh fa-spin"></i></span> Submit
+                                </button>
+                            </div>
                         </div>
-                        <div class="form-group col-md-6 col-lg-6 col-sm-6 col-xs-6">
-                            <label for="lga">LGA</label>
-                            <select id="lga" class="form-control">
-                                <option>Select LGA</option>
-                            </select>
-                        <p class="error-message error-lga">Please choose your preferred local government</p>
-                        </div>
-                    </div>
-                        <div class="form-group">
-                            <label for="area">Additional Info</label>
-                            <input type="text" name="desc" id="desc" class="form-control" placeholder=" e.g area, proximity to PPA, ammenities..." required>
-                        <p class="error-message error-desc">Please add additional information</p>
-                        </div>
-
-                        <div class="style-1 wrapper m-b-50 m-t-50 p-l-r">
-                            <label for="budget">Budget</label>
-                            <div class="slider-range m-b-20" style="margin-top: 5px;"></div>
-                            <span class="slider-range-value-1"></span>
-                            &nbsp; <span class="text-btw"> to </span> &nbsp;
-                            <span class="slider-range-value-2"></span>
-                        </div>
-
-                        <div class="text-right">
-                            <button class="btn btn-primary btn-warning next">Let's go</button>
-                        </div>
-
-                    </div>
-                    <div id="personal-details" style="display: none;">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" name="name" id="name" class="form-control" placeholder="Name" required>
-                        <p class="error-message error-name">Please provide your name</p>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" name="email" id="email" class="form-control" placeholder="Email" required>
-                        <p class="error-message error-email">Please provide a valid email address</p>
-                        </div>
-                        <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="phone" name="phone" id="phone" class="form-control" placeholder="Phone Number" required>
-                        <p class="error-message error-phone">Please provide a valid phone number</p>
-                        </div>
-                        <br>
-                        <div class="text-left" style="position: absolute">
-                            <button type="button" class="btn btn-primary btn-warning prev">Go back</button>
-                        </div>
-                        <div class="text-right">
-                            <button type="button" id="submit" class="btn btn-primary btn-success submit"><b>Submit</b></button>
-                        </div>
-                    </div>
-                </form>
+                    </form>
+                </div>
             </div>
         </div>
+    </main>
+
+
     <script src="js/jquery.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
     <script src="js/nouislider.min.js"></script>
     <script src="js/nigeria.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.8.1/firebase.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.1/firebase-analytics.js"></script>
     <script src="js/getinfo.js"></script>
     <script>
         $(document).ready(function(){
-        $('.next').click(function(e){
-            e.preventDefault();
-            if($("#state").val() == "Select State"){
-                $("#state").focus();
-                $(".error-state").show();
-                return false;
+            $('.next').click(function(e){
+                e.preventDefault();
+                if($("#state").val() == "Select State"){
+                    $("#state").focus();
+                    $(".error-state").show();
+                    return false;
+                }
+                else if($("#lga").val() == "Select LGA"){
+                    $("#lga").focus();
+                    $(".error-lga").show();
+                    return false;
+                }
+
+             /*   else if ($("#desc").val() === ""){
+                    $("#desc").focus();
+                    $(".error-desc").show();
+                    return false;
+                } */
+                $('.step').html('Step 2/2')
+                $(".form-text").html("Great job making it this far. All that's left is your contact information.")
+                $('#apartment-details').hide();
+                $('#personal-details').show();
+            });
+
+            $('.prev').click(function(e){
+                e.preventDefault();
+                $(".form-text").html("Need to get an accomodation? Don't stress, just book!")
+                $('#apartment-details').show();
+                $('#personal-details').hide();
+            });
+
+            // nouislider range
+
+            var rangeSlider = document.querySelector(".slider-range");
+            //var naira = wNumb({prefix: '₦', decimals: 0})
+            noUiSlider.create(rangeSlider, {
+              start: [50000, 100000],
+              connect: true,
+              step: 1000,
+              range: {
+                min: [30000],
+                max: [200000]
+              },
+            });
+
+            /* begin Value  */
+            var rangeSliderValueElement1 = document.querySelector(".slider-range-value-1");
+            var rangeSliderValueElement2 = document.querySelector(".slider-range-value-2");
+
+            rangeSlider.noUiSlider.on("update", function(values, handle1, handle2) {
+              rangeSliderValueElement1.innerHTML = "₦"+values[0];
+              rangeSliderValueElement2.innerHTML = "₦"+values[1];
+            });
+            /* end Value  */
+            
+            /* begin Tab */
+            var handle = rangeSlider.querySelector(".noUi-handle");
+            
+            handle.setAttribute("tabindex", 0);
+
+            handle.addEventListener("click", function() {
+              this.focus();
+            });
+
+            handle.addEventListener("keydown", function(event) {
+              var value = Number(rangeSlider.noUiSlider.get());
+
+              switch (event.which) {
+                case 37:
+                  rangeSlider.noUiSlider.set(value - 1);
+                  break;
+                case 39:
+                  rangeSlider.noUiSlider.set(value + 1);
+                  break;
+              }
+            });
+
+            for(var i = 0; i < nigeria.length; i++){
+                state = nigeria[i].state;
+                $("#state").append("<option value='"+state.id+"'>"+state.name+"</option>");
             }
-            else if($("#lga").val() == "Select LGA"){
-                $("#lga").focus();
-                $(".error-lga").show();
-                return false;
-            }
 
-         /*   else if ($("#desc").val() === ""){
-                $("#desc").focus();
-                $(".error-desc").show();
-                return false;
-            } */
-            $(".form-h1").html("Almost done! Tell us how to contact you")
-            $('#apartment-details').hide();
-            $('#personal-details').show();
-        });
+            $("#desc").change(function(){
+                $(".error-desc").hide();
+            })
 
-        $('.prev').click(function(e){
-            e.preventDefault();
-            $(".form-h1").html("Need to get an accomodation? Don't stress, just book!")
-            $('#apartment-details').show();
-            $('#personal-details').hide();
-        });
+            $("#name").change(function(){
+                $(".error-name").hide();
+            })
 
-        // nouislider range
+            $("#email").change(function(){
+                $(".error-email").hide();
+            })
 
-        var rangeSlider = document.querySelector(".slider-range");
-        //var naira = wNumb({prefix: '₦', decimals: 0})
-        noUiSlider.create(rangeSlider, {
-          start: [50000, 100000],
-          connect: true,
-          step: 1000,
-          range: {
-            min: [30000],
-            max: [200000]
-          },
-        });
+            $("#phone").change(function(){
+                $(".error-phone").hide();
+            })
 
-        /* begin Value  */
-        var rangeSliderValueElement1 = document.querySelector(".slider-range-value-1");
-        var rangeSliderValueElement2 = document.querySelector(".slider-range-value-2");
+            $("#state").change(function(){
+                $(".error-state").hide();
+                $("#lga").empty();
+                if($(this).val() == "Select State"){
+                    $("#lga").html("<option>Select LGA</option>")
+                }
+                let statePos = Number($(this).val()) - 1;
+                let lgas = nigeria[statePos].state.locals;
+                for(var i = 0; i < lgas.length; i++){
+                    $("#lga").append("<option>"+lgas[i].name+"</option>");
+                }
+            })
 
-        rangeSlider.noUiSlider.on("update", function(values, handle1, handle2) {
-          rangeSliderValueElement1.innerHTML = "₦"+values[0];
-          rangeSliderValueElement2.innerHTML = "₦"+values[1];
-        });
-        /* end Value  */
-        
-        /* begin Tab */
-        var handle = rangeSlider.querySelector(".noUi-handle");
-        
-        handle.setAttribute("tabindex", 0);
-
-        handle.addEventListener("click", function() {
-          this.focus();
-        });
-
-        handle.addEventListener("keydown", function(event) {
-          var value = Number(rangeSlider.noUiSlider.get());
-
-          switch (event.which) {
-            case 37:
-              rangeSlider.noUiSlider.set(value - 1);
-              break;
-            case 39:
-              rangeSlider.noUiSlider.set(value + 1);
-              break;
-          }
-        });
-
-        for(var i = 0; i < nigeria.length; i++){
-            state = nigeria[i].state;
-            $("#state").append("<option value='"+state.id+"'>"+state.name+"</option>");
-        }
-
-        $("#desc").change(function(){
-            $(".error-desc").hide();
+            // button spinner
+            $('#submit').click(function() {
+                $(this).toggleClass('active');
+                $('.step').html("");
+                $('.form-text').html("");
+            });
         })
-
-        $("#name").change(function(){
-            $(".error-name").hide();
-        })
-
-        $("#email").change(function(){
-            $(".error-email").hide();
-        })
-
-        $("#phone").change(function(){
-            $(".error-phone").hide();
-        })
-
-        $("#state").change(function(){
-            $(".error-state").hide();
-            $("#lga").empty();
-            if($(this).val() == "Select State"){
-                $("#lga").html("<option>Select LGA</option>")
-            }
-            let statePos = Number($(this).val()) - 1;
-            let lgas = nigeria[statePos].state.locals;
-            for(var i = 0; i < lgas.length; i++){
-                $("#lga").append("<option>"+lgas[i].name+"</option>");
-            }
-        })
-})
     </script>
 </body>
 </html>
