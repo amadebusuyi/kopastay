@@ -1,22 +1,14 @@
 html {
     font-size: 62.5%;
-    background: url(../img/bg-img-desk.jpg) no-repeat;
-    background-size: cover;
-    background-position: inherit;
-    padding: 0;
-    overflow-x: hidden;
-    width: 100vw;
 }
 :root {  
   --color-primary: #2b2b2b;
   --default-size: 1.6rem;
 }
 body {
-    font-family: 'Lato', sans-serif;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    background: transparent;
+    font-family: Arial;
+    background: url(../img/header.png) no-repeat;
+    background-size: cover;
 }
 * {
     outline: none!important;
@@ -34,27 +26,23 @@ button.btn.btn-primary {
 }
 
 header{
-    position: absolute;
-    height: 100px;
-    top: 0;
-    width: 100vw;
+    display: flex;
+    justify-content: space-between;
 }
-
-.brand-logo{
+.brand-logo,
+.social-handles{
     margin: 30px;
 }
-
+.social-handles {
+    margin-top: 40px;
+}
 .brand-logo img{
     width: 200px;
     height: auto;
 }
-
 .social-handles img{
-    position: absolute;
     width: 40px;
     height: auto;
-    top: 30px;
-    right: 70px;
 }
 p {
     line-height: 22px;
@@ -72,8 +60,8 @@ nav.navbar {
 .register-wrapper {
     max-width: 45rem;
     padding: 3.2rem;
-    background: rgba(255, 255, 255, 0.8);
-    margin-top: 12rem;
+    background: rgba(255, 255, 255, 0.5);
+    margin-top: 2rem;
     margin-bottom: 6rem;
     color: #000;
     border-radius: 4px;
@@ -82,9 +70,41 @@ nav.navbar {
 .register-wrapper form {
     margin-top: 2rem;
 }
+h1.step,
+p.form-text {
+    font-style: normal;
+    font-weight: normal;
+    color: rgba(55,52,53,1);
+}
+h1.step {
+    font-family: Georgia; 
+    font-size: 40px; 
+}
+p.form-text {
+    line-height: 30px;
+    margin-top: 15px;
+    font-family: Arial;
+    font-size: 18px;
+    color: rgba(55,52,53,1);
+}
+#apartment-details label {
+    font-weight: bold;
+    font-size: 14px;
+    color: rgba(12,13,13,1);
+    margin-top: 1rem;
+}
 .form-control {
+    background: rgb(241, 249, 255);
     padding-top: 0;
     height: 4.5rem;
+    font-size: 14px;
+    color: rgba(55,52,53,0.51);
+    border: none;
+}
+textarea.form-control {
+    height: 16.5rem;
+    padding: 1rem;
+    margin-top: 1rem;
 }
 button.btn.btn-primary {
     padding: 1rem 3rem;
@@ -96,11 +116,31 @@ button.btn.btn-primary {
     display: none;
 }
 .slider-range-value-1, .slider-range-value-2, .text-btw{
-    font-size: 1.6rem;
     display: inline-block;
     margin-top: 10px;
+    font-size: 1.4rem;
+    color: rgba(55,52,53,0.702);
 }
 
+.btn.btn-primary {
+    color: #fff;
+}
+.btn.btn-primary.next,
+.btn.btn-primary.submit {
+    background: rgb(123, 219, 85);
+    border: 1px solid rgb(123, 219, 85);
+    padding-top: 1rem;
+    font-weight: bold;
+}
+.btn.btn-primary.prev {
+    background: rgb(55, 52, 53);
+    border-color: rgb(55, 52, 53);
+}
+.btn.btn-primary:hover {
+    background: transparent;
+    color: #fff;
+    border-color: #fff;
+}
 .whatsapp{
     text-align: center;
 }
@@ -112,6 +152,33 @@ button.btn.btn-primary {
 
 #feedback{
     display: none;
+    text-align: center;
+}
+
+#feedback h2 {
+    font-size: 3.5rem;
+}
+
+#feedback img {
+    margin: 3rem 0;
+}
+
+#feedback p {
+    margin: 2rem 0;
+}
+
+#feedback .btn.btn-success.btn-continue {
+    background: #61d261;
+    border-color: #61d261;
+    padding: 1rem 2rem;
+    padding-top: 7px;
+    font-size: 1.6rem;
+    color: white !important;
+    margin-bottom: 5rem;
+}
+
+.bold {
+    font-weight: bold;
 }
 
 .btn-success{
@@ -123,26 +190,42 @@ button.btn.btn-primary {
 .btn-warning{
     color: white;
 }
+.spinner {
+    display: inline-block;
+    opacity: 0;
+    max-width: 0;
+    -webkit-transition: opacity 0.25s, max-width 0.45s;
+    -moz-transition: opacity 0.25s, max-width 0.45s;
+    -o-transition: opacity 0.25s, max-width 0.45s;
+    transition: opacity 0.25s, max-width 0.45s;
+}
+
+.has-spinner.active {
+    cursor: progress;
+}
+
+.has-spinner.active .spinner {
+    opacity: 1;
+    max-width: 50px;
+    margin-right: 6px;
+}
+
 
 @media (max-width: 450px){
-    html{
-        background: url("../img/bg-img-mob.jpg") no-repeat;
+    .brand-logo{
+        margin: 20px;
     }
 
-.brand-logo{
-    margin: 20px;
-}
+    .brand-logo img{
+        width: 200px;
+        height: auto;
+    }
 
-.brand-logo img{
-    width: 200px;
-    height: auto;
-}
-
-.social-handles img{
-    position: absolute;
-    width: 40px;
-    height: auto;
-    top: 30px;
-    right: 30px;
-}
+    .social-handles img{
+        position: absolute;
+        width: 40px;
+        height: auto;
+        top: 30px;
+        right: 30px;
+    }
 }
